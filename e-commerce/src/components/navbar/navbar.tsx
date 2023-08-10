@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Search from '../search/search'
 
 function Navbar() {
   return (
@@ -20,7 +21,7 @@ function Navbar() {
         <div>
         <Link href={'/cart'}>CART </Link>
         </div>
-
+        <Search />
       </div>
     
   )
