@@ -1,7 +1,15 @@
+"use client";
 import Image from 'next/image'
+import {useState, useEffect} from 'react'
+
+
 
 export default function Home() {
+  
   return (
-    <p>This is the homepage.</p>
+    <div>
+    
+      <p>This is Homepage.</p>
+    </div>
   )
 }

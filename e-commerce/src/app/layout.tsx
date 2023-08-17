@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/footer/footer'
+import Provider from '@/redux/provider'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,13 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Provider>
       <body>
       <Navbar />
       <main className='h-screen'>{children}</main>
       <Footer />
       </body>
       
-      
+      </Provider>
     </html>
   )
 }
