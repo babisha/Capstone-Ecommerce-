@@ -10,6 +10,7 @@ function cart() {
   const handleRemove = (id: any) => {
     dispatch(remove(id))
   }
+
   return (
     <div>
       {

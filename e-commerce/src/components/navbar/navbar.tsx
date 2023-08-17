@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 function Navbar() {
   const item = useSelector((state)=>state.cart)
   return (
-    <div className='flex justify-between mb-4 p-2 bg-indigo-200'>
+    <div className=' navbar flex justify-between mb-4 p-2 bg-indigo-200'>
         <h1>lets-breathee</h1>
         <div> 
           <Link href={'/'}>HOME </Link>
