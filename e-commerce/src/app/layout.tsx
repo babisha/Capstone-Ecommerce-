@@ -1,7 +1,10 @@
+import Navbar from '@/components/navbar/navbar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Link from 'next/link'
+import Footer from '@/components/footer/footer'
+import Provider from '@/redux/provider'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,30 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Provider>
       <body>
-      <div className='flex justify-between mb-4 p-2 bg-indigo-200'>
-        <h1>lets-breathee</h1>
-        <div> 
-          <Link href={'/'}>HOME </Link>
-        </div>
-        <div> 
-        <Link href={'/product'}>SHOP </Link>
-        </div>
-        <div>
-        <Link href={'/album'}> ALBUM</Link>
-        </div>
-        <div>
-        <Link href={'/blog'}>STORY </Link>
-        </div>
-        <div>
-        <Link href={'/cart'}>CART </Link>
-        </div>
-
-      </div>
-      {children}
+      <Navbar />
+      <main className='h-screen'>{children}</main>
+      <Footer />
       </body>
       
-      
+      </Provider>
     </html>
   )
 }
