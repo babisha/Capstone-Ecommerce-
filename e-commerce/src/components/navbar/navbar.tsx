@@ -25,6 +25,7 @@ function Navbar() {
         <Link href={'/cart'}>CART </Link>
         </div>
         <Search />
+        <Link href={'/login'}>LOG IN</Link>
         <span>Items:{item.length}</span>
       </div>
     
